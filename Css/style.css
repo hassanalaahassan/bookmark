@@ -1,0 +1,136 @@
+
+:root{
+    --text-color:#352E28;
+    --color-orange:#FEC260;
+}
+
+
+::selection{
+    background-color: var(--color-orange);
+}
+section{
+    /* background-color: #F7ECDE   ; */
+    min-height: 100vh;
+    
+}
+.head{
+    padding:50px 0 ;
+    width: fit-content;
+   
+}
+h1{
+    font-family: 'Pacifico', cursive;
+    color:var(--text-color);
+    position: relative; 
+    font-size: 50px;    
+}
+h1::before{
+    content:'';
+    width: 100%;
+    height: 40%;
+    background-color:var(--color-orange) ;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    transition: .3s;
+}
+h1:hover::before{
+    height: 68%;
+}
+
+.input{
+    border-top: 2px dotted var(--text-color);
+    border-bottom: 2px dotted var(--text-color);
+
+}
+.input h2{
+    font-size: 32px;
+     background: -webkit-linear-gradient(45deg, rgba(78,168,45,1) 20%, rgba(184,196,93,1) 63%);;
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+}
+.input label{
+    color: var(--text-color);
+}
+.input button{
+    margin-top: 20px;
+    background-color: #D1512D;
+    color: white;
+    padding: 8px 50px;
+    border: none;
+    border-radius: 10px;
+    transition: .3s;
+}
+.input button:hover{
+    background-color: #BB4120;
+}
+.input .form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #BB4120;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(231, 183, 183, 0.5);
+}
+th{
+    width: 25%;
+    text-align: center;
+}
+tbody .visit{
+    background-color: #b8ce47;
+    border: none;
+    color: white;
+    transition: .3s;
+    padding: 7px 20px;
+    border-radius: 10px;
+}
+tbody .visit:hover{
+    background-color: #97aa38;
+}
+tbody .delete{
+    background-color: #f70e29;
+    border: none;
+    color: white;
+    transition: .3s;
+    padding: 7px 20px;
+    border-radius: 10px;
+}
+tbody .delete:hover{
+    background-color: #d11b30;
+}
+.layer{
+    position: relative;
+}
+.rule{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    inset: 0 0 0 0 ;
+}
+.rule span{
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50px;
+    padding: 0 10px;
+
+}
+.rule p{
+    color: var(--text-color);
+    font-size: 21px;
+    font-family: 'Bree Serif', serif;
+}
+tbody a{
+    text-decoration: none;
+    color: white;
+}
+
+.valid:focus{
+    box-shadow: 0 0 0 .25rem rgba(6, 255, 60, 0.262)!important;
+    border-color: rgba(6, 255, 60, 0.282)!important;
+    border: 2px;
+}
+.not-valid:focus{
+    box-shadow: 0 0 0 .25rem rgba(255, 10, 6, 0.305)!important;
+    border-color: rgba(255, 10, 6, 0.299)!important;
+    border: 2px;
+
+}

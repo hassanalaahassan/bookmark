@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/all.min.css">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Css/style.css">
+    <title>Bookmark</title>
+</head>
+<body>
+
+    <section>
+       <div class="layer"> 
+           <div class=" container-xl">
+        <div class="head col-12 mx-auto text-capitalize">
+         <h1>bookmarker</h1>
+        </div>
+         <div class="row">
+             <div class="col-12">
+                 <div class="input d-flex flex-column align-items-center py-5">
+                     <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites<i class="fa-solid fa-bookmark"></i> </h2>
+                     <label for="" class=" me-auto"> <i class="fa-solid fa-link"></i> Site Name</label>
+                     <input type="text" placeholder="Bookmark Name" class="form-control my-3" id="bookName" onkeyup="validName()">
+                     <label for="" class=" me-auto"><i class="fa-solid fa-book-bookmark"></i> Site URL</label>
+                     <input type="text" placeholder="Website URL" class="form-control my-3" id="bookUrl" onkeyUp="validLink()">
+                     <button type="submit" onclick="add()">Submit</button>
+                 </div>
+
+                 <div class="data pt-4">
+                     <table class="table">
+                         <thead >
+                             <th>Index</th>
+                             <th>Website Name</th>
+                             <th>Visit</th>
+                             <th>Delete</th>
+                         </thead>
+                         <tbody id="perant" class="text-center">
+
+                             
+
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+             
+         </div>
+           </div>
+           
+           <div id="layer" class="rule d-flex align-items-center justify-content-center flex-column d-none vh-100 ">
+            <div class=" bg-white p-5 rounded-2">
+                <div class="d-flex align-items-center justify-content-between  pb-4 bg-white ">
+                    <div class="wrn d-flex gap-1">
+                    <span class="bg-danger"></span>
+                    <span class="bg-warning"></span>
+                    <span class="bg-success"></span>
+                    </div>
+                    <div class="close">
+                        <button class="btn border-0" onclick="none()">X</button>
+                    </div>
+                    
+                </div>
+                <p class="w-75">Site Name or Url is not valid, Please follow the rules below :</p>
+                <p><i class="fa-regular fa-circle-right p-2"></i> Site name must contain at least 3 characters</p>
+                <p><i class="fa-regular fa-circle-right p-2"></i> Site URL must be a valid one</p>
+            </div>
+            
+            
+           </div>
+       </div>
+    </section>   
+
+<script src="./index.js"></script>
+</body>
+</html>
